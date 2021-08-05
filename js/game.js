@@ -59,7 +59,7 @@ getNewQuestion = () =>{
     question.innerText = currentQuestion.question;
 
     choices.forEach( choice => {
-        const number = coice.dataset['number'];
+        const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
     })
 };
