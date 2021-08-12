@@ -1,5 +1,7 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const progressText = document.getElementById("progressText")
+const hint = document.getElementsByClassName("hint")
 
 let currentQuestion=[];
 let acceptingAnswers = false;
@@ -7,44 +9,12 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-    {
-        question: "Question 1?", 
-        choice1: "<answer1>",
-        choice2: "<answer2>",
-        choice3: "<answer3>",
-        choice4: "<answer4>",
-        answer: 1
-    }, 
-    {
-        question: "Question 2?", 
-        choice1: "<answer1>",
-        choice2: "<answer2>",
-        choice3: "<answer3>",
-        choice4: "<answer4>",
-        answer: 2
-    }, 
-    {
-        question: "Question 3?", 
-        choice1: "<answer1>",
-        choice2: "<answer2>",
-        choice3: "<answer3>",
-        choice4: "<answer4>",
-        answer: 3
-    }, 
-    {   question: "Question 4?", 
-        choice1: "<answer1>",
-        choice2: "<answer2>",
-        choice3: "<answer3>",
-        choice4: "<answer4>",
-        answer: 4
-}
-]
+
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 4;
 
-startGame = () => {
+function startGame() { 
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
@@ -52,8 +22,12 @@ startGame = () => {
     getNewQuestion();
 };
 
-getNewQuestion = () =>{
+getNewQuestion = () => {
+    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
+        return window.location.assign("/end.html");
+    }
     questionCounter++;
+    progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -73,9 +47,9 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-
+        console.log(selectedAnswer);
         getNewQuestion();
-    })
-})
+    });
+});
 
 startGame();

@@ -38,7 +38,12 @@ h3 {
 }
 
 /*Utilities*/
-
+.card {
+    background-color: #ecf5ff;
+    font-size: 62.5%;
+    width:80%; 
+    margin:10px auto;
+}
 .container {
     width: 100vw;
     height: 100vh;
