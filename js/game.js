@@ -82,6 +82,10 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
+//use ternary opertor 
+//update calsses to apply whether answers are incorrect or correct. Set the default to incorrect and then check to see if it is correct. Use the ternary operator to see if condition is tru or not
+        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
         console.log(selectedAnswer);
         getNewQuestion();
     });
