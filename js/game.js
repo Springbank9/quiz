@@ -4,7 +4,7 @@ const progressText = document.getElementById("progressText")
 const hint = document.getElementsByClassName("hint")
 
 let currentQuestion=[];
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -28,10 +28,10 @@ let questions = [
         answer: 2
     }, 
     {
-        question: "Question 3?", 
-        choice1: "<answer1>",
-        choice2: "<answer2>",
-        choice3: "<answer3>",
+        question: "Who was the most famous cycnic in ancient Greek philosophy?", 
+        choice1: "<Diogenes>",
+        choice2: "<Leieutius>",
+        choice3: "<Aristotle>",
         choice4: "<answer4>",
         answer: 3
     }, 
