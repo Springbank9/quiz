@@ -88,9 +88,12 @@ choices.forEach(choice => {
         console.log(selectedAnswer);
 
         selectedChoice.parentElement.classList.add(classToApply);
+
+        setTimeout( () => {
         selectedChoice.parentElement.classList.remove(classToApply);
 
         getNewQuestion();
+        }, 1000);
     });
 });
 
