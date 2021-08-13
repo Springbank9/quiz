@@ -11,16 +11,16 @@ let availableQuestions = [];
 
 let questions = [
     {
-        question: "Question 1?", 
-        choice1: "<answer1>",
-        choice2: "<answer2>",
+        question: "Intelligent target seeking devices that sought Iranian centrifuges?", 
+        choice1: "Stuxnet",
+        choice2: "WannaCry",
         choice3: "<answer3>",
         choice4: "<answer4>",
         answer: 1,
         hint: "hint"
     }, 
     {
-        question: "Question 2?", 
+        question: "Nothing ruins an argument like facts?", 
         choice1: "<beetroot>",
         choice2: "<tea>",
         choice3: "<keys>",
