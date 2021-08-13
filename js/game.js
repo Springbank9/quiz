@@ -3,8 +3,8 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText")
 const hint = document.getElementsByClassName("hint")
 
-let currentQuestion=[];
-let acceptingAnswers = false;
+let currentQuestion={};
+let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -83,10 +83,13 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 //use ternary opertor 
-//update calsses to apply whether answers are incorrect or correct. Set the default to incorrect and then check to see if it is correct. Use the ternary operator to see if condition is tru or not
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 
         console.log(selectedAnswer);
+
+        selectedChoice.parentElement.classList.add(classToApply);
+        selectedChoice.parentElement.classList.remove(classToApply);
+
         getNewQuestion();
     });
 });
