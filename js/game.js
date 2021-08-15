@@ -2,9 +2,9 @@ const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
-const progressBarFull = docuemnt.getElementById("progressBarFull");
-let currentQuestion={};
-let acceptingAnswers = true;
+const progressBarFull = document.getElementById("progressBarFull");
+let currentQuestion = {};
+let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -17,7 +17,6 @@ let questions = [
         choice3: "<answer3>",
         choice4: "<answer4>",
         answer: 1,
-        hint: "hint"
     }, 
     {
         question: "Nothing ruins an argument like facts?", 
@@ -42,16 +41,15 @@ let questions = [
         choice4: "<answer4>",
         answer: 4
 }
-]
+];
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 4;
+const MAX_QUESTIONS = 3;
 
-function startGame() { 
+startGame = () => { 
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    console.log(availableQuestions);
     getNewQuestion();
 };
 
@@ -61,19 +59,19 @@ getNewQuestion = () => {
         return window.location.assign("/end.html");
     }
     questionCounter++;
-    //every time questions are incremented ,progress bar needs to be updated
-    progressBarFull.style.width = (questionCounter / MAX_QUESTIONS) * 100;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+    //every time questions are incremented ,progress bar needs to be updated
+    progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100} %`;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
-    choices.forEach( choice => {
+    choices.forEach(choice => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number];
     });
 availableQuestions.splice(questionIndex, 1);
-console.log(availableQuestions);
 acceptingAnswers = true;
 };
 
@@ -85,14 +83,15 @@ choices.forEach(choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 //use ternary opertor 
-        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        const classToApply = 
+        selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
-        if(classToApply === 'correct'){
+        if(classToApply === "correct"){
             incrementScore(CORRECT_BONUS);
         }
         selectedChoice.parentElement.classList.add(classToApply);
 
-        setTimeout( () => {
+        setTimeout(() => {
         selectedChoice.parentElement.classList.remove(classToApply);
 
         getNewQuestion();
@@ -103,6 +102,6 @@ choices.forEach(choice => {
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
-}
+};
 
 startGame();
