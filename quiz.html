@@ -10,7 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">  
   </head>
     <body>
-    <div class="container">
+      <div class="card">
+    <div class="container col-lg-12">
       <div id="game" class="justify-center flex-column">
         <div id="heading">
           <div id="hud-item">
@@ -30,7 +31,9 @@
             </h1>
           </div>
         </div>
-        <h2 id="question">Question</h2>
+          <div class="card-text">
+        <h2 id="question" class="card-text">Question</h2>
+      </div>
         <div class="choices">
           <p class="letter">A</p>
           <p class="choice-text" data-number="1">Choice 1</p>
@@ -44,8 +47,8 @@
           <p class="choice-text" data-number="3">Choice 3</p>
         </div>
       </div>
-    </div>
-    <script src="js/quiz.js"></script>
+  
+    <script src="js/game.js"></script>
     <script src="js/questions.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   </body>

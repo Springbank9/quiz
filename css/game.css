@@ -1,28 +1,47 @@
-.choice-container {
-    display: flex;
+
+.card {
+    width: 70vw;
+}
+
+.card-body {
+    width: 100vw;
+    margin: 2rem;
+}
+
+
+.card-text {
+    font-size: x-small;
+    width: 50vw;
+}
+
+.choices {
+    margin-top: 1rem;
+    align-content: center;
+    text-align: center;
     margin-bottom: 0.5rem;
-    width: 100%;
-    font-size: 1.8rem;
+    width: 75%;
     border: 0.1rem solid rgb(48, 47, 47);
     background-color: white;
 }
 
-.choice-container:hover {
+.choices:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(48, 47, 47);
+    box-shadow: 0 0.2rem 1rem 0 rgba(48, 47, 47);
     transform: translateY(-0/1rem);
-    transition: transform 150ms;
+    transition: transform 100ms;
 }
 
-.choice-prefix {
+.letter {
     padding: 1.5rem 2.5rem;
     background-color: tomato;
     color: #333;
+    margin-bottom: 0px;
 }
 
 .choice-text {
-    padding: 1.5rem;
     width: 100%;
+    align-items: center;
+    font-size: small;
 }
 
 .correct {
@@ -33,29 +52,42 @@
     background-color: red;
 }
 
-#hud {
+h2 #question {
+    width: 100vw;
+    font-size: small;
+}
+#heading {
     display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.progress-text {
+    font-size: small;
+}
+
+.score-text {
+    text-align: center;
+    font-size: large;
     justify-content: space-between;
 }
 
-.hud-prefix {
-    text-align: center;
-    font-size: 2rem;
-}
-
-.hud-main-text {
+.score-count {
     text-align: center;
 }
 
 #progressBar {
-    width: 20rem;
-    height: 4rem;
+    width: 31.5rem;
+    height: 2.5rem;
     border: 0.3rem solid #333;
     margin-top: 1.5rem;
+    justify-content: center;
 }
 
 #progressBarFull {
-height: 3.4rem;
+height: 2rem;
 background-color: #333;
 width: 0%;
 }
+
