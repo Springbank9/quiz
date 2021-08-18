@@ -14,16 +14,10 @@ let questions = [
       question: "What is the term to describe a hypothetical point in time at which technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization?", 
       choice1: "Singularity",
       choice2: "Panpsychism",
-      choice3: "",
+      choice3: "Hylozoism",
       answer: 1,
   }, 
-  {
-      question: "Question 2?", 
-      choice1: "<beetroot>",
-      choice2: "<tea>",
-      choice3: "<keys>",
-      answer: 2
-  }, 
+
   {
       question: "Diogenes of Sinope was one of the founders of which school of philosophy?", 
       choice1: "Stoicism",
@@ -38,45 +32,46 @@ let questions = [
       answer: 1
 },
 {
-  question: "The technological singularity—or simply the singularity[1]—is a hypothetical point in time at which technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization?", 
-  choice1: "<answer1>",
-  choice2: "<answer2>",
-  choice3: "<answer3>",
+  question: "What names were given to the fictional characters commonly used as placeholders in discussions about cryptographic protocols or systems, and in other science and engineering literature?", 
+  choice1: "Bob and Alice",
+  choice2: "Bob and Joe",
+  choice3: "Alice and Rob",
   answer: 1,
 }, 
 {
-  question: "The technological singularity—or simply the singularity[1]—is a hypothetical point in time at which technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization?", 
-  choice1: "<answer1>",
-  choice2: "<answer2>",
-  choice3: "<answer3>",
+  question: "Who said: 'As we know, there are known knowns; there are things we know we know. We also know there are known unknowns; that is to say we know there are some things we do not know. But there are also unknown unknowns—the ones we don't know we don't know.'?", 
+  choice1: "Donald Rumsfeld",
+  choice2: "Isaac Newton",
+  choice3: "Ludwig wittgenstein",
   answer: 1,
 }, 
 {
-  question: "The technological singularity—or simply the singularity[1]—is a hypothetical point in time at which technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization?", 
-  choice1: "<answer1>",
-  choice2: "<answer2>",
-  choice3: "<answer3>",
+  question: "What does the word 'recalcitrance' mean?", 
+  choice1: "The quality of being determined not to do what other people, especially people in authority, want or expect to be done.",
+  choice2: "A situation in which a series of unwelcome or tedious events appear to be recurring in exactly the same way.",
+  choice3: "The quality of having unlimited power and the ability to do anything.",
   answer: 1,
 }, 
 {
-  question: "The technological singularity—or simply the singularity[1]—is a hypothetical point in time at which technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization?", 
-  choice1: "<answer1>",
-  choice2: "<answer2>",
-  choice3: "<answer3>",
-  answer: 1,
+  question: "In defeating Kasparov on May 11 1997, what was the name of the machine that made history as the first computer to beat a world champion chess player?", 
+  choice1: "IBM Watson",
+  choice2: "Deep Blue",
+  choice3: "Horace",
+  answer: 2,
 }, 
 {
-  question: "The technological singularity—or simply the singularity[1]—is a hypothetical point in time at which technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization?", 
-  choice1: "<answer1>",
-  choice2: "<answer2>",
-  choice3: "<answer3>",
-  answer: 1,
+  question: "Which agricultural practice best describes farming holistically with livestock and trees?", 
+  choice1: "Organic Farming",
+  choice2: "Agroforestry",
+  choice3: "Plantation management",
+  answer: 2,
 }, 
+
 ];
 
 //CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 15;
+const MAX_QUESTIONS = 8;
 
 startGame = () => {
   questionCounter = 0;
