@@ -1,92 +1,70 @@
-
-.card {
-    width: 70%;
-    height: 50%;
+.q-text {
+    font-weight: bold;
 }
-
-.card-body {
-    width: 50%;
-    margin: 2rem;
-}
-
 
 .choice {
-    margin-top: 1rem;
-    align-content: center;
-    text-align: center;
+    display: flex;
     margin-bottom: 0.5rem;
-    width: 75%;
-    border: 0.1rem solid rgb(48, 47, 47);
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
     background-color: white;
-}
-
-.choice[hover] {
+  }
+  
+  .choice:hover {
     cursor: pointer;
-    box-shadow: 0 0.2rem 1rem 0 rgba(48, 47, 47);
-    transform: translateY(-0.25rem);
-    transition: 100ms;
-}
-
-.letter {
-    padding: 1rem 1.5rem;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+  
+  .letter{
+    padding: 1.5rem 2.5rem;
     background-color: tomato;
     color: #333;
     margin-bottom: 0px;
     text-decoration: underline;
-    font-weight: bolder;
-}
-
-.choice-text {
+    font-weight: 800;
+  }
+  
+  .choice-text {
+    padding: 1.5rem;
     width: 100%;
-    align-items: center;
-    font-size: small;
-    font-weight: 600;
-}
-
-.correct {
-    background-color: green;
-}
-
-.incorrect {
+  }
+  
+  .correct {
+    background-color: yellow;
+  }
+  
+  .incorrect {
     background-color: red;
-}
-
-#question {
-    width: 100vw;
-    font-size: small;
-}
-#heading {
+  }
+  
+  
+  #heading {
     display: flex;
     justify-content: space-between;
-    
-}
-
-
-.progress-text {
-    font-size: small;
-}
-
-.score-text {
+  }
+  
+  .header-text {
     text-align: center;
-    font-size: large;
-    justify-content: space-between;
-}
-
-.score-count {
+    font-size: 2rem;
+  }
+  
+  .score-count {
     text-align: center;
-}
-
-#progressBar {
-    width: 31.5rem;
-    height: 2.5rem;
+  }
+  
+  #progressBar {
+    width: 20rem;
+    height: 4rem;
     border: 0.3rem solid #333;
     margin-top: 1.5rem;
-    justify-content: center;
-}
-
-#progressBarFull {
-height: 2rem;
-background-color: #333;
-width: 0%;
-}
-
+  }
+  
+  #progressBarFull {
+    height: 3.4rem;
+    background-color: #56a5eb;
+    width: 0%;
+  }
+ 

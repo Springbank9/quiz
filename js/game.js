@@ -25,16 +25,16 @@ let questions = [
       answer: 2
   }, 
   {
-      question: "Question 3?", 
-      choice1: "<answer1>",
-      choice2: "<answer2>",
-      choice3: "<answer3>",
+      question: "Diogenes of Sinope was one of the founders of which school of philosophy?", 
+      choice1: "Stoicism",
+      choice2: "Epicureanism",
+      choice3: "Cynicism",
       answer: 3
   }, 
-  {   question: "What was the name of the ntelligent target seeking device that sought Iranian centrifuges?", 
+  {   question: "What was the name of the intelligent target seeking device that sought Iranian centrifuges?", 
       choice1: "Stuxnet",
       choice2: "WannaCry",
-      choice3: "<answer3>",
+      choice3: "Petya",
       answer: 1
 },
 {
