@@ -1,20 +1,16 @@
 
 .card {
-    width: 70vw;
+    width: 70%;
+    height: 50%;
 }
 
 .card-body {
-    width: 100vw;
+    width: 50%;
     margin: 2rem;
 }
 
 
-.card-text {
-    font-size: x-small;
-    width: 50vw;
-}
-
-.choices {
+.choice {
     margin-top: 1rem;
     align-content: center;
     text-align: center;
@@ -24,24 +20,27 @@
     background-color: white;
 }
 
-.choices:hover {
+.choice[hover] {
     cursor: pointer;
     box-shadow: 0 0.2rem 1rem 0 rgba(48, 47, 47);
-    transform: translateY(-0/1rem);
-    transition: transform 100ms;
+    transform: translateY(-0.25rem);
+    transition: 100ms;
 }
 
 .letter {
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 1.5rem;
     background-color: tomato;
     color: #333;
     margin-bottom: 0px;
+    text-decoration: underline;
+    font-weight: bolder;
 }
 
 .choice-text {
     width: 100%;
     align-items: center;
     font-size: small;
+    font-weight: 600;
 }
 
 .correct {
@@ -52,7 +51,7 @@
     background-color: red;
 }
 
-h2 #question {
+#question {
     width: 100vw;
     font-size: small;
 }

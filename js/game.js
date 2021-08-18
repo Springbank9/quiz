@@ -11,10 +11,10 @@ let availableQuesions = [];
 
 let questions = [
   {
-      question: "The technological singularity—or simply the singularity[1]—is a hypothetical point in time at which technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization?", 
-      choice1: "<answer1>",
-      choice2: "<answer2>",
-      choice3: "<answer3>",
+      question: "What is the term to describe a hypothetical point in time at which technological growth becomes uncontrollable and irreversible, resulting in unforeseeable changes to human civilization?", 
+      choice1: "Singularity",
+      choice2: "Panpsychism",
+      choice3: "",
       answer: 1,
   }, 
   {
@@ -31,9 +31,9 @@ let questions = [
       choice3: "<answer3>",
       answer: 3
   }, 
-  {   question: "Intelligent target seeking devices: e.g. Stuxnet that sought Iranian centrifuges?", 
-      choice1: "<answer1>",
-      choice2: "<answer2>",
+  {   question: "What was the name of the ntelligent target seeking device that sought Iranian centrifuges?", 
+      choice1: "Stuxnet",
+      choice2: "WannaCry",
       choice3: "<answer3>",
       answer: 1
 },
